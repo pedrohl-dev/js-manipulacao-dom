@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style6.css">
+    <title>Atividade 6</title>
+</head>
+<header>
+    <ul>
+        <a href="../atividade 5/index.html"><li class="li-left"><div class="container-input"><<  Atividade Anterior</div></li></a>
+        <li><div class="container-box"><h1>Atividade 6</h1></div></li>
+    </ul>
+    <p class="aviso">*Contendo CSS apenas no header e section*</p>
+</header>
+<body>
+    <section>
+        <div id="formulario"></div>
+    </section>
+    <script>
+        function criarFormularioLogin() {
+            const formLogin = document.getElementById('formulario');
+
+            /*Caixa do login*/
+            const container = document.createElement('div')
+            container.style.display='flex';
+            container.style.flexDirection='column';
+            container.style.alignItems='center';
+            container.style.justifyContent='center';
+            container.style.width='200px';
+            container.style.height='250px';
+            container.style.backgroundColor='rgb(224, 224, 224)';
+            container.style.border='4px solid gray'
+            /*Caixa do login*/
+
+            const form = document.createElement("form");
+            form.style.display='flex';
+            form.style.flexDirection='column';
+            form.style.alignItems='center';
+            form.style.justifyContent='center';
+
+            const inputLogin = document.createElement('input');
+            inputLogin.type='text';
+            inputLogin.placeholder='Usuário';
+            inputLogin.style.margin='20px';
+            inputLogin.style.paddingLeft='5px';
+            inputLogin.style.border='2px solid gray';
+            inputLogin.style.outline='none';
+
+            const inputSenha = document.createElement('input');
+            inputSenha.type='password';
+            inputSenha.placeholder='Senha';
+            inputSenha.style.margin='20px';
+            inputSenha.style.paddingLeft='5px';
+            inputSenha.style.border='2px solid gray';
+            inputSenha.style.outline='none';
+
+            const botaoEnviar = document.createElement('button');
+            botaoEnviar.type='submit';
+            botaoEnviar.style.margin='20px';
+            botaoEnviar.style.padding='4px';
+            botaoEnviar.innerText = 'Enviar';
+            botaoEnviar.style.cursor='pointer';
+            
+            
+            container.appendChild(form);
+            form.appendChild(inputLogin);
+            form.appendChild(inputSenha);
+            form.appendChild(botaoEnviar);
+
+            formLogin.appendChild(container);
+
+
+        }
+        criarFormularioLogin()
+    </script>
+</body>
+</html>

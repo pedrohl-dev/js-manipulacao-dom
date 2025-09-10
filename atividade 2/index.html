@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Atividade 2</title>
+</head>
+<body>
+<header>
+    <ul class="ulbutton">
+        <a href="../atividade 1/index.html"><li class="li-left"><div class="container-input"><<  Atividade Anterior</div></li></a>
+        <li><div class="container-box"><h1>Atividade 2</h1></div></li>
+        <a href="../atividade 3/index.html"><li class="li-right"><div class="container-input">Próxima Atividade >></div></li></a>
+    </ul>
+</header>
+<section>
+    <h1>Abaixo está os vetores<br> na tabela < ul ></h1>
+
+    <div class="ul-box" id="ulbox">
+    </div>
+
+
+    <script>
+
+        var ulBox = document.getElementById('ulbox');
+
+function criarLista(nomes) {
+            const ul = document.createElement('ul');
+
+            for (let i = 0; i < nomes.length; i++) {
+                const li = document.createElement('li');
+                li.innerText = nomes[i];
+                ul.appendChild(li);
+            }
+
+            ulBox.appendChild(ul);
+        }
+
+        const nomes = ['Pedro', 'Davi', 'Guilherme', 'Maria', 'Marcelo'];
+        criarLista(nomes);
+    </script>
+    </section>
+</body>
+</html>

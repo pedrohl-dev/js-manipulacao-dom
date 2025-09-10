@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style5.css">
+    <title>Atividade 5</title>
+</head>
+<header>
+    <ul>
+        <a href="../atividade 4/index.html"><li class="li-left"><div class="container-input"><<  Atividade Anterior</div></li></a>
+        <li><div class="container-box"><h1>Atividade 5</h1></div></li>
+        <a href="../atividade 6/index.html"><li class="li-right"><div class="container-input">Próxima Atividade >></div></li></a>
+    </ul>
+</header>
+<body>
+    <section>
+        <h3>Aqui possui 10 tags < p ></h3>
+        <div class="p-box" id="textoContainer"></div>
+    </section>
+    <script>
+        function gerarParagrafos(qtd){
+            
+            const pbox = document.getElementById('textoContainer');
+
+            for(let a = 0; a < qtd; a++){
+                const p = document.createElement('p');
+                p.innerText='Parágrafo gerado dinamicamente';
+                pbox.appendChild(p);
+                p.style.margin='4px'
+            }
+        }
+        gerarParagrafos(10);
+    </script>
+</body>
+</html>
